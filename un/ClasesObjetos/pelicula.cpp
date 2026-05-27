@@ -1,20 +1,28 @@
 #include <iostream>
 #include <windows.h>
+#include <cstring>
 using namespace std;
 
 class clasePelicula{
-    public:
+    private:
         char titulo[20];
         int duracion;
         float precio;
-
+    public:
+        clasePelicula();
         void registrar();
         void imprimirInfo();
 };
 
+clasePelicula::clasePelicula(){
+    strcpy(titulo, "[SIN TÍTULO]");
+    duracion=0;
+    precio=0;
+}
+
 void clasePelicula::registrar(){
     cout<<"= REGISTRAR =\n";
-    cout<<"Título: "; fflush(stdin); gets(titulo);
+    cout<<"Título: "; cin.ignore(); cin.getline(titulo,20);
     cout<<"Duración (min): "; cin>>duracion;
     cout<<"Precio (S/): "; cin>>precio;
     cout<<endl;
@@ -33,7 +41,6 @@ int main(){
 
     clasePelicula titanic;
     titanic.registrar();
-    cout<<"Título: "<<titanic.titulo<<endl<<endl;
     titanic.imprimirInfo();
 
     return 0;
