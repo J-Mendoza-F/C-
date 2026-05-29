@@ -26,11 +26,11 @@ reloj::reloj(int h, int m, int s, int b){
 }
 
 void tic_tac(){
-
+    cout<<"Tic, tac, tic, tac\n";
 }
 
 void avanza(int h, int m, int s){
-
+    
 }
 
 void atrasa(int h, int m, int s){
