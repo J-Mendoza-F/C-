@@ -69,7 +69,13 @@ class triangulo:public figura{
 };
 
 triangulo::triangulo(string c, float b, float a, string t):figura(c){
-    
+    base=b;
+    altura=a;
+    tipo=t;
+}
+
+void triangulo::calcularArea(){
+    cout<<"= ÁREA DEL TRIÁNGULO =\nÁrea: "<<(base*altura)/2<<endl;
 }
 /*
 ---------------------------------------------------------------------
