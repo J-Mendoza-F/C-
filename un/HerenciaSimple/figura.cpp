@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 class figura{
@@ -20,8 +21,20 @@ class circulo:public figura{
     public:
         circulo(string c, float r);
         void calcularArea();
-        void calcularOerimetro();
+        void calcularPerimetro();
 };
+
+circulo::circulo(string c, float r):figura(c){
+    radio=r;
+}
+
+void circulo::calcularArea(){
+    cout<<"= ÁREA DEL CÍRCULO =\nÁrea: "<<3.14*pow(radio,2);
+}
+
+void circulo::calcularPerimetro(){
+    cout<<"= PERÍMETRO DEL CÍRCULO =\nPerímetro: "<<3.14*2*radio;
+}
 /*
 ---------------------------------------------------------------------
 */
@@ -49,7 +62,6 @@ class triangulo:public figura{
 ---------------------------------------------------------------------
 */
 int main(){
-
 
     return 0;
 }
