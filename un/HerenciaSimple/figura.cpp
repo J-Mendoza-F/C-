@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <windows.h>
 using namespace std;
 
 class figura{
@@ -81,6 +82,8 @@ void triangulo::calcularArea(){
 ---------------------------------------------------------------------
 */
 int main(){
+    SetConsoleOutputCP(CP_UTF8);
+    
 
     return 0;
 }
