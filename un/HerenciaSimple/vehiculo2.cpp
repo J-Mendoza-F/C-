@@ -1,4 +1,5 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 class vehiculo{
@@ -92,9 +93,18 @@ void camion::cambiarCarga(){
 ---------------------------------------------------------------------
 */
 int main(){
+    SetConsoleOutputCP(CP_UTF8);
     int op;
     do{
-
+        cout<<"=== MENÚ PRINCIPAL ===\n1) Crear objeto\n2) Vehículos disponibles\n3) Reservar vehículo\n0) Salir de la aplicación\nOopción: "; cin>>op;
+        switch(op){
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+        }
     }while(op!=0);
     return 0;
 }
